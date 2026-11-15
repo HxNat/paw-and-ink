@@ -14,8 +14,7 @@
             <img src="{{ asset('images/bonnie-peek.png') }}" alt="Bonnie Peeking">
         </div>
         <header class="auth-header">
-            <div class="logo-icon">
-            </div>
+            <div class="logo-icon"></div>
             <h1>Paw & <span class="text-green">Ink</span></h1>
 
             <p>Register a new membership</p>

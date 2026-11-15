@@ -33,3 +33,17 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware('auth')->name('dashboard');
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Si lo tienes definido en routes/web.php:
+Route::get('/reset-password/{token}', function (string $token, \Illuminate\Http\Request $request) {
+    return view('auth.reset-password', [
+        'token' => $token,
+        'email' => $request->query('email'),
+    ]);
+})->middleware('guest')->name('password.reset');

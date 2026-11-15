@@ -109,9 +109,17 @@
             </a>
         </menu>
 
-        <div class="card-links">
-            <p><a href="{{ route('password.request') }}">I forgot my password</a></p>
-            <p><a href="{{ route('register') }}" class="link-secondary">Register a new membership &rarr;</a></p>
+        <div class="card-links login-links">
+            <a href="{{ route('password.request') }}" class="forgot-link">I forgot my password</a>
+            <a href="{{ route('register') }}" class="register-link">Register a new membership &rarr;</a>
+        </div>
+
+        <div class="card-paw-watermark" aria-hidden="true">
+            <span class="paw-pad main-pad"></span>
+            <span class="paw-pad toe-1"></span>
+            <span class="paw-pad toe-2"></span>
+            <span class="paw-pad toe-3"></span>
+            <span class="paw-pad toe-4"></span>
         </div>
 
         <footer class="auth-footer">
